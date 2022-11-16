@@ -137,14 +137,14 @@ main{
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .form{
-        width: 50vh;
+        width: 40vh;
         margin: 2rem 1rem 0rem 1rem;
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
     .form{
         width: 40vh;
         margin: 2rem 1rem 0rem 1rem;
