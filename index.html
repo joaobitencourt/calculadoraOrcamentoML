@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css" type="text/css">
+    <script src="/src/script.js"></script>
+    <title> Calculadora de Orçameto (ML)</title>
+</head>
+<body onload="addinItemsOnSelector()">
+<div id="container" >
+    <header>
+        <h1> Calcule o Orçamento </h1>
+        <p>(Dados úteis apenas para anúncios premium, sem reputação ou reputação amarela) </p>
+    </header>
+    <main>
+        <secton class="filters">
+            <input type="checkbox" name="premium" id="addPremium" checked>
+            <label for="premium"> Premium </label>
+            <input type="checkbox" name="noAndYellowReputation" id="noAndYellowReputation" checked>
+            <label for="noAndYellowReputation"> Reputação amarela e Sem Reputação </label>
+        </secton>
+        <section class="form">
+            <input class="inputsStyle" type="number" id="preco" placeholder="Preço" value="">
+            <input class="inputsStyle hide" type="number" id="writeCategorie" placeholder="Digite a porcentegem" value="">
+            <select class="inputsStyle " id="categories"></select>    
+            <section id="parcentLinks">
+                <p onclick="removeHide()">Digite a porcentagem da sua categoria <a href="https://www.mercadolivre.com.br/landing/costos-venta-producto" target="_blank" >Porcentagem?</a></p>
+                
+            </section>
+            <select class="inputsStyle" id="peso"></select>
+            <button class="buttonStyle" onclick="getInputValues()"> Calcular </button>
+        </section>
+        <div id="Resps">
+            
+        </div>
+    </main>
+</div>
+</body>
+</html>
