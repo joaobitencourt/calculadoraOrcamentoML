@@ -32,9 +32,14 @@ header .tittle p{
     font-weight: 600;
 }
 
+header h1{
+    text-align: center;
+}
+
 header p{
     font-size: .8em;
     font-weight: 100;
+    text-align: center;
 }
 
 main{
@@ -128,6 +133,7 @@ main{
         width: 80vh;
         margin: 2rem 5rem 0rem 5rem;
     }
+
 }
 
 @media (max-width: 550px) {
@@ -135,12 +141,20 @@ main{
         width: 60vh;
         margin: 2rem 3rem 0rem 3rem;
     }
+
+    #Resps{
+        width: 60vh;
+    }
 }
 
 @media (max-width: 450px) {
     .form{
         width: 40vh;
         margin: 2rem 1rem 0rem 1rem;
+    }
+
+    #Resps{
+        width: 40vh;
     }
 }
 
