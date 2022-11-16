@@ -54,16 +54,14 @@ main{
 /* Forms */
 
 .form{
-    width: 80vh;
+    width: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-flow: column;
     flex-wrap: nowrap;
-    margin: 1rem 1rem 0rem 1rem;
+    margin: 2rem 1rem 0rem 1rem;
 }
-
-
 
  .form #parcentLinks p{
     font-size: .8em;
@@ -123,4 +121,32 @@ main{
 
 .hide{
     display: none;
+}
+
+@media (max-width: 700px) {
+    .form{
+        width: 80vh;
+        margin: 2rem 5rem 0rem 5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .form{
+        width: 60vh;
+        margin: 2rem 3rem 0rem 3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .form{
+        width: 50vh;
+        margin: 2rem 1rem 0rem 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .form{
+        width: 40vh;
+        margin: 2rem 1rem 0rem 1rem;
+    }
 }
