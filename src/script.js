@@ -54,20 +54,21 @@ function getInputValues() {
     if (price != 0) {
         let porcentagem = 100;
         let priceLimit = 79;
-        if (price < priceLimit) {
+        if (price <= priceLimit) {
             document.getElementById('Resps').innerHTML = `
-            <p> Valor do produto abaixo de R$ 79 então a taxa fixa cobrada pelo ML será de R$ 5 por produto. Fonte:<a href="https://www.mercadolivre.com.br/ajuda/quanto-custa-vender-um-produto_870">Custo fixo adicional</a> </p> 
+            <p> Valor do produto abaixo de R$ 79 então a taxa fixa cobrada pelo ML será de R$ 5 por produto. 
+            Fonte:<a href="https://www.mercadolivre.com.br/ajuda/quanto-custa-vender-um-produto_870">Custo fixo adicional</a> </p> 
             <p> O Valor do frete será: ${weightItemValue} </p>
             `;
         }
-        if(writeCategorie == 0){
+        else if(writeCategorie == 0){
             console.log(categoriesItemValue);
             let valorACobrarCategoriesItemValue = (categoriesItemValue * price)/porcentagem;
             document.getElementById('Resps').innerHTML = `
             <p> O Valor menos a porcentagem do ML será: ${valorACobrarCategoriesItemValue } </p> 
             <p> O Valor do frete será: ${weightItemValue} </p>`;
         }
-        else{
+        else if (writeCategorie != 0){
             console.log(writeCategorie);
             let valorACobrar = (writeCategorie * price)/porcentagem;
             console.log(valorACobrar);
@@ -98,6 +99,8 @@ function addinItemsOnSelector() {
     });
 }
 
+
+//Functon show hiden divs
 function removeHide() {
     let writeCategorie = document.getElementById('writeCategorie');
     let categories = document.getElementById('categories');
