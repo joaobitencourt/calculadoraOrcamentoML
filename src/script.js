@@ -62,16 +62,13 @@ function getInputValues() {
             `;
         }
         else if(writeCategorie == 0){
-            console.log(categoriesItemValue);
-            let valorACobrarCategoriesItemValue = (categoriesItemValue * price)/porcentagem;
+            let valorACobrarCategoriesItemValue = ((categoriesItemValue * price)/porcentagem).toFixed(2);
             document.getElementById('Resps').innerHTML = `
             <p> O Valor menos a porcentagem do ML será: ${valorACobrarCategoriesItemValue } </p> 
             <p> O Valor do frete será: ${weightItemValue} </p>`;
         }
         else if (writeCategorie != 0){
-            console.log(writeCategorie);
-            let valorACobrar = (writeCategorie * price)/porcentagem;
-            console.log(valorACobrar);
+            let valorACobrar = ((writeCategorie * price)/porcentagem).toFixed(2);
             document.getElementById('Resps').innerHTML = `
             <p> O Valor menos a porcentagem do ML será: ${valorACobrar} </p> 
             <p> O Valor do frete será: ${weightItemValue} </p>
